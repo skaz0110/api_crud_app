@@ -3,6 +3,7 @@ class ProductsController < ApplicationController
   def index
     @product = Product.all
     render json: @product
+   
   end
 
   def create
@@ -24,5 +25,5 @@ class ProductsController < ApplicationController
       render json: @product.errors, status: :unprocessable_entity
     end
   end
-  
+
 end
